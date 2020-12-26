@@ -1,0 +1,11 @@
+<configuration>
+        <!--数据库配置信息-->
+     <dateSource>
+         <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+         <property name="jdbcUrl" value="jdbc:mysql:///mybatis"></property>
+         <property name="username" value="root"></property>
+         <property name="password" value="root"></property>
+     </dateSource>
+    <!--存放mapper.xml的全路径-->
+     <mapper resource="UserMapper.xml"></mapper>
+</configuration>

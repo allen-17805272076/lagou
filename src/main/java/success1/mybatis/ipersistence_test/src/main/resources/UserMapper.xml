@@ -1,0 +1,14 @@
+<mapper namespace="user">
+    <!--sql的唯一表示： namespzce.id来组成 ：  statementId-->
+    <select id="selectList" resultType="com.lagou.pojo.User">
+        select * from user
+    </select>
+    <!--
+       User user=new User();
+       user.setId(1);
+       user.SetUsername("zhangwangyan");
+    -->
+    <select id="selectOne" resultType="com.lagou.pojo.User" paramterType="com.lagou.pojo.user">
+        select * from user where id=#{id} and username=#{name}
+    </select>
+</mapper>

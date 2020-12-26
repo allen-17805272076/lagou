@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lagou</artifactId>
+        <groupId>com.zwy</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../../../../../../pom.xml</relativePath>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.zwy</groupId>
-    <artifactId>lagou</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>src/main/java/success1/mybatis/ipersistence_test</module>
-    </modules>
+    <artifactId>IPersistence-test</artifactId>
+    <!--引入自定义持久层框架的依赖-->
 </project>
