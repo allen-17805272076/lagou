@@ -3,6 +3,7 @@ package com.zwy.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.sun.org.apache.xml.internal.resolver.readers.SAXCatalogReader;
+import com.zwy.io.Resources;
 import com.zwy.pojo.Configuration;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -42,6 +43,11 @@ public class XmlConfigBuilder {
         comboPooledDataSource.setPassword(properties.getProperty("password"));
         configuration.setDataSource(comboPooledDataSource);
         //mapper.xml解析
+        List<Element> mapperList = rootElement.selectNodes("//mapper");
+        for (Element element:mapperList) {
+            String mapperPath = element.attributeValue("resource");
+            InputStream resourceAsStream= Resources.getResuourceAsStream(mapperPath);
+        }
         return null;
     }
 }
